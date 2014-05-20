@@ -1,0 +1,85 @@
+2014/05/20 06:57:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "plugins/like.php".' in C:\wamp\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('plugins/like.ph...')
+#1 C:\wamp\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/plugins/like.php?app_id=&channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FdgdTycPTSRj.js%3Fversion%3D41%23cb%3Df279fdcb6c%26domain%3Dwww.lesechos.fr%26origin%3Dhttp%253A%252F%252Fwww.lesechos.fr%252Ff1280f11b%26relation%3Dparent.parent&font=arial&href=http%3A%2F%2Flesechos.fr%2F0203508294643.htm%23Xtor%3DAD-6000&layout=button_count&locale=fr_FR&sdk=joey&show_faces=false&width=90
+HTTP_REFERER=http://www.lesechos.fr/economie-politique/monde/actu/0203508294643-l-armee-organise-un-demi-coup-d-etat-en-thailande-672165.php
+---
+2014/05/20 07:13:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\wamp\yiiframework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/20 07:18:53 [error] [php] include(User.php): failed to open stream: No such file or directory (C:\wamp\yiiframework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\protected\components\UserIdentity.php(26): spl_autoload_call()
+#1 C:\wamp\www\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\wamp\yiiframework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#3 C:\wamp\yiiframework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#4 C:\wamp\yiiframework\base\CModel.php(159): CInlineValidator->validate()
+#5 C:\wamp\www\protected\controllers\SiteController.php(94): LoginForm->validate()
+#6 C:\wamp\yiiframework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\wamp\yiiframework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\wamp\yiiframework\web\CController.php(286): SiteController->runAction()
+#9 C:\wamp\yiiframework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\wamp\yiiframework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\wamp\yiiframework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\wamp\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/site/login
+in C:\wamp\www\protected\components\UserIdentity.php (26)
+in C:\wamp\www\protected\models\LoginForm.php (52)
+in C:\wamp\www\protected\controllers\SiteController.php (94)
+2014/05/20 07:19:05 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `utilisateur` `t` WHERE login='admin' LIMIT 1 LIMIT 1.
+in C:\wamp\www\protected\components\UserIdentity.php (26)
+in C:\wamp\www\protected\models\LoginForm.php (52)
+in C:\wamp\www\protected\controllers\SiteController.php (94)
+2014/05/20 07:19:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `utilisateur` `t` WHERE login='admin' LIMIT 1 LIMIT 1' in C:\wamp\yiiframework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\yiiframework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\yiiframework\db\ar\CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 C:\wamp\yiiframework\db\ar\CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\protected\components\UserIdentity.php(26): CActiveRecord->find('login='admin' L...')
+#4 C:\wamp\www\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#5 C:\wamp\yiiframework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#6 C:\wamp\yiiframework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 C:\wamp\yiiframework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#8 C:\wamp\www\protected\controllers\SiteController.php(94): CModel->validate()
+#9 C:\wamp\yiiframework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#10 C:\wamp\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\yiiframework\web\CWebApplication.php(282): CController->run('login')
+#14 C:\wamp\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#15 C:\wamp\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://localhost/site/login
+---
+2014/05/20 07:19:37 [error] [exception.CException] exception 'CException' with message 'Property "Utilisateur.password" is not defined.' in C:\wamp\yiiframework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\yiiframework\db\ar\CActiveRecord.php(145): CComponent->__get('password')
+#1 C:\wamp\www\protected\components\UserIdentity.php(29): CActiveRecord->__get('password')
+#2 C:\wamp\www\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 C:\wamp\yiiframework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\wamp\yiiframework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\wamp\yiiframework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\wamp\www\protected\controllers\SiteController.php(94): CModel->validate()
+#7 C:\wamp\yiiframework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\wamp\yiiframework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\yiiframework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\yiiframework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\yiiframework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\wamp\yiiframework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\wamp\yiiframework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/site/login
+HTTP_REFERER=http://localhost/site/login
+---
